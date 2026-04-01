@@ -101,7 +101,8 @@ services:
       NAME: "rabbitmq1"
     volumes:
       - "../docker/rabbitmq/enabled_plugins:/etc/rabbitmq/enabled_plugins"
-
+      - "../docker/rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro"
+      - "../docker/rabbitmq/definitions.json:/etc/rabbitmq/definitions.json:ro"
 volumes:
   cqe_mysql: {}
   redisinsight:
